@@ -4,11 +4,16 @@
 
 #include "PerformanceManagement.h"
 #include <iostream>
+#include <stdlib.h>
+#include <ctime>
+#include <unistd.h>
 
 using namespace std;
 
 PerformanceManagement::PerformanceManagement(float carTemperature, float maxVelocity, float velocity, int motorRpm, int baterryVolt,
                              float oilPression, float oilTemperature){
+    unsigned seed = time(0);
+    srand(seed);
     time_t localTime = time(NULL);
 
     setCarTemperature(carTemperature);
@@ -24,7 +29,7 @@ void PerformanceManagement::showPerformanceStatus(){
     cout << "Horario atual: " << this->getDate()
          << "Temperatura do carro: " << this->getCarTemperature() << " C"
          << "\nVelocidade maxima do carro: " << this->getMaxVelocity() << " Km/h"
-         << "\nVelocidade atual do carro: " << this->getMaxVelocity() << " Km/h"
+         << "\nVelocidade atual do carro: " << this->getVelocity() << " Km/h"
          << "\nRotacao do motor: " << this->getMotorRpm() << " rpm"
          << "\nPressao do Oleo: " << this->getOilPression() << " atm"
          << "\nTemperatura do Oleo: " << this->getOilTemperature() << " C"
@@ -33,7 +38,18 @@ void PerformanceManagement::showPerformanceStatus(){
 }
 
 void PerformanceManagement::updatePerformanceStatus(){
+    this->setCarTemperature(this->getCarTemperature()+20);
+    this->setVelocity(this->getVelocity()+100);
+    this->setMotorRpm(this->getMotorRpm()+1000);
+    this->setOilPression(this->getOilPression()+7);
+    this->setOilTemperature(this->getOilTemperature()+5);
 
+    (rand()%(100-1+1) + 1) > 50 ?
+    (this->setBaterryVolt(this->getBaterryVolt()-2)):
+    (this->setBaterryVolt(this->getBaterryVolt()+2));
+
+    cout << "Acelerando e atualizando dados do sistema..." << endl;
+    sleep(3);
 }
 
 

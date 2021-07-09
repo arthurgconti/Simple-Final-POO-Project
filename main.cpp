@@ -1,8 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
-#include "./Classes/FaultManagement.h"
-#include "./Classes/PerformanceManagement.h"
+#include "./Classes/BoardComputer.h"
 #include <pthread.h>
 #include <cstdlib>
 #include <ctime>
@@ -15,15 +14,8 @@ int main() {
     srand(seed);
 
     unsigned int option;
-    BoardComputer *boardComputer = new BoardComputer(0,300,0,0,110,
-                                                     0,0);
-    PerformanceManagement *performanceManagement = new PerformanceManagement(boardComputer->getCarTemperature(),
-                                                                            boardComputer->getMaxVelocity(),
-                                                                            boardComputer->getVelocity(),
-                                                                            boardComputer->getMotorRpm(),
-                                                                            boardComputer->getBaterryVolt(),
-                                                                            boardComputer->getOilPression(),
-                                                                            boardComputer->getOilTemperature());
+    BoardComputer *boardComputer = new BoardComputer(0,300,0,
+                                                     0,110,0,0);
 
 
 do {
@@ -33,24 +25,43 @@ do {
         <<  "----------------------\n"
         <<  "1) Exibir status atual do carro\n"
         <<  "2) Atualizar dados do sistema\n"
-        <<  "3) Sair "
+        <<  "3) Exibir falhas detectadas no sistema\n"
+        <<  "4) Aliviar o carro\n"
+        <<  "5) Sair "
         << endl;
             cin >> option;
 
         switch (option) {
             case 1: {
-                performanceManagement->showPerformanceStatus();
+                boardComputer->showPerformanceStatus();
                 break;
             }
             case 2: {
+                boardComputer->updatePerformanceStatus();
                 break;
             }
             case 3: {
+                boardComputer->showErrorStatus(boardComputer->getMotorRpm(),boardComputer->getVelocity(),
+                                               boardComputer->getMaxVelocity(),boardComputer->getOilPression(),
+                                               boardComputer->getOilTemperature(),boardComputer->getCarTemperature());
                 break;
             }
 
+            case 4: {
+                boardComputer->relieveCar();
+                break;
+            }
+
+            case 5:
+                break;
+
+            default:
+            {
+                cout << "Opcao invalida"<<endl;
+                break;
+            }
         }
-    }while(option != 3);
+    }while(option != 5);
 
 
 

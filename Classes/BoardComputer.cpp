@@ -3,83 +3,28 @@
 //
 
 #include "BoardComputer.h"
+#include <iostream>
+#include <unistd.h>
 
-using namespace std;
 
 BoardComputer::BoardComputer(float carTemperature, float maxVelocity, float velocity, int motorRpm, int baterryVolt,
-                             float oilPression, float oilTemperature){
-    time_t localTime = time(NULL);
+                             float oilPression, float oilTemperature) : PerformanceManagement(carTemperature,
+                                                                                              maxVelocity, velocity,
+                                                                                              motorRpm, baterryVolt,
+                                                                                              oilPression,
+                                                                                              oilTemperature) {
 
-    setCarTemperature(carTemperature);
-    setMaxVelocity(maxVelocity);
-    setMotorRpm(motorRpm);
-    setOilPression(oilPression);
-    setBaterryVolt(baterryVolt);
-    setOilTemperature(oilTemperature);
-    setDate(ctime(&localTime));
 }
 
+void BoardComputer::relieveCar() {
+    this->setCarTemperature(this->getCarTemperature()-10);
+    this->setVelocity(this->getVelocity()-700);
+    this->setMotorRpm(this->getMotorRpm()-1500);
+    this->setOilPression(this->getOilPression()-5);
+    this->setOilTemperature(this->getOilTemperature()-3);
 
-float BoardComputer::getCarTemperature(){
-    return carTemperature;
-}
+    this->setBaterryVolt(this->getBaterryVolt()-4);
 
-void BoardComputer::setCarTemperature(float carTemperature) {
-    BoardComputer::carTemperature = carTemperature;
-}
-
-float BoardComputer::getMaxVelocity() {
-    return maxVelocity;
-}
-
-void BoardComputer::setMaxVelocity(float maxVelocity) {
-    BoardComputer::maxVelocity = maxVelocity;
-}
-
-float BoardComputer::getVelocity(){
-    return velocity;
-}
-
-void BoardComputer::setVelocity(float velocity) {
-    BoardComputer::velocity = velocity;
-}
-
-int BoardComputer::getMotorRpm(){
-    return motorRPM;
-}
-
-void BoardComputer::setMotorRpm(int motorRpm) {
-    motorRPM = motorRpm;
-}
-
-int BoardComputer::getBaterryVolt(){
-    return baterryVolt;
-}
-
-void BoardComputer::setBaterryVolt(int baterryVolt) {
-    BoardComputer::baterryVolt = baterryVolt;
-}
-
-float BoardComputer::getOilPression(){
-    return oilPression;
-}
-
-void BoardComputer::setOilPression(float oilPression) {
-    BoardComputer::oilPression = oilPression;
-}
-
-float BoardComputer::getOilTemperature() {
-    return oilTemperature;
-}
-
-void BoardComputer::setOilTemperature(float oilTemperature) {
-    BoardComputer::oilTemperature = oilTemperature;
-}
-
-char *BoardComputer::getDate(){
-    return date;
-}
-
-void BoardComputer::setDate(char *date) {
-    BoardComputer::date = date;
+    std::cout << "Aliviando o carro e atualizando dados do sistema..." << std::endl;
+    sleep(3);
 }

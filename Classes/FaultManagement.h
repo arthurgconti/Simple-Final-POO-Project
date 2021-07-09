@@ -9,11 +9,12 @@
 class FaultManagement {
 
 public:
-    int alertMotorRotationFault(int);
-    int alertMaxVelocity(float);
-    int alertOilPressure(int);
-    int alertOilTemperature(int);
-    int alertCarTemperature(int);
+    void showErrorStatus(int,float,float,int,int,int);
+    void alertMotorRotationFault(int);
+    void alertMaxVelocity(int);
+    void alertOilPressure(int);
+    void alertOilTemperature(int);
+    void alertCarTemperature(int);
 };
 
 

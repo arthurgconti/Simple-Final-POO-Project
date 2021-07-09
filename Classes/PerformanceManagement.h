@@ -4,7 +4,6 @@
 
 #ifndef EP5_PERFORMANCEMANAGEMENT_H
 #define EP5_PERFORMANCEMANAGEMENT_H
-#include "BoardComputer.h"
 #include <ctime>
 
 

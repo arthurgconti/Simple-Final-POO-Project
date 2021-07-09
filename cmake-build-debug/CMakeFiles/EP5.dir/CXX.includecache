@@ -9,18 +9,14 @@
 C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
 ctime
 -
+PerformanceManagement.h
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
+FaultManagement.h
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.h
 
 C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.h
 
-C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.cpp
-PerformanceManagement.h
 C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
-iostream
--
-
-C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
-BoardComputer.h
-C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
 ctime
 -
 
@@ -31,10 +27,8 @@ stdlib.h
 -
 string.h
 -
-./Classes/FaultManagement.h
-C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.h
-./Classes/PerformanceManagement.h
-C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
+./Classes/BoardComputer.h
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
 pthread.h
 -
 cstdlib

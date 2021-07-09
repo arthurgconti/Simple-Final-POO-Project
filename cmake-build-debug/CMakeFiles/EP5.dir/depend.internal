@@ -4,11 +4,12 @@
 CMakeFiles/EP5.dir/Classes/BoardComputer.cpp.obj
  C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.cpp
  C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
+ C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.h
+ C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
 CMakeFiles/EP5.dir/Classes/FaultManagement.cpp.obj
  C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.cpp
  C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.h
 CMakeFiles/EP5.dir/Classes/PerformanceManagement.cpp.obj
- C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
  C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.cpp
  C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
 CMakeFiles/EP5.dir/main.cpp.obj
