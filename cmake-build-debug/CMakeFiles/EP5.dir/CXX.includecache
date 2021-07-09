@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.cpp
+BoardComputer.h
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
+iostream
+-
+unistd.h
+-
+
 C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
 ctime
 -
@@ -18,23 +26,5 @@ C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.h
 
 C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
 ctime
--
-
-C:/Users/arthurgconti/CLionProjects/EP5/main.cpp
-iostream
--
-stdlib.h
--
-string.h
--
-./Classes/BoardComputer.h
-C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
-pthread.h
--
-cstdlib
--
-ctime
--
-locale.h
 -
 
