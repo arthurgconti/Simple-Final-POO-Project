@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
+ctime
+-
+
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.h
+
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.cpp
+PerformanceManagement.h
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
+iostream
+-
+
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
+BoardComputer.h
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/BoardComputer.h
+ctime
+-
+
+C:/Users/arthurgconti/CLionProjects/EP5/main.cpp
+iostream
+-
+stdlib.h
+-
+string.h
+-
+./Classes/FaultManagement.h
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/FaultManagement.h
+./Classes/PerformanceManagement.h
+C:/Users/arthurgconti/CLionProjects/EP5/Classes/PerformanceManagement.h
+pthread.h
+-
+cstdlib
+-
+ctime
+-
+locale.h
+-
+
